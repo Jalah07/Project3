@@ -307,4 +307,47 @@ template {
   display: none;
 }
 
+header a {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 20px 0;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0 15px 0;
+  background-color: #eaeaea;
+  font-family: "Roboto", sans-serif;
+  gap: 20px;
+  box-shadow: 0px -1px 3px rgba(60, 60, 60, 0.4);
+}
+
+.booking {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 25px 0 50px 0;
+}
+
+.booking h1 {
+  font-size: 24px;
+}
+
+.booking p {
+  font-weight: 300;
+  padding: 0 0 15px 0;
+}
+
+.explore-button {
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  color: #FFFFFF;
+  padding: 20px 30px 20px 30px;
+  border-radius: 35px;
+  border: none;
+}
+
 /*# sourceMappingURL=main.css.map */
