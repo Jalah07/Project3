@@ -326,6 +326,41 @@ header a {
   box-shadow: inset 0px -1px 3px rgba(60, 60, 60, 0.4);
 }
 
+.spinner {
+  animation: spinner-remover 0 3s forwards;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
+
+.spinner__loader {
+  border: 16px solid #FF79DA;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  width: 120px;
+  height: 120px;
+  animation: spin 3s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spinner-remover {
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .booking {
   display: flex;
   flex-wrap: wrap;
@@ -481,7 +516,14 @@ header a {
 }
 
 .card__like-icon--full {
-  display: none;
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  position: absolute;
+  left: 275px;
+  font-size: 22px;
+  transition: opacity 1s;
 }
 
 .card__like-icon--empty {
@@ -489,6 +531,10 @@ header a {
   position: absolute;
   left: 275px;
   font-size: 22px;
+}
+
+.card__like-icon:hover .card__like-icon--full {
+  opacity: 1;
 }
 
 footer {
@@ -565,21 +611,24 @@ header {
   justify-content: center;
   align-items: center;
 }
-header .header-container {
+header .header__container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 350px;
   height: 75px;
+  flex-wrap: wrap;
 }
-header .header-container .header-container__arrow {
+header .header__container .header__arrow {
+  display: flex;
+  font-size: 22px;
+  min-width: fit-content;
+  flex: 1;
+  position: relative;
+  left: -70px;
+}
+header .header__container .header__logo {
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 22px;
-}
-header .header-container img {
-  width: 200px;
 }
 
 .menu {
@@ -601,100 +650,157 @@ header .header-container img {
   background-color: #F6F6F6;
   border-radius: 25px;
   margin-top: -35px;
-  position: absolute;
+  position: relative;
   min-width: 100%;
+  padding-bottom: 30px;
 }
 .menu__options {
   font-family: Roboto;
 }
 .menu .entrees {
   padding-left: 10px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
 }
 .menu .entrees__text {
   text-transform: uppercase;
-  margin-left: 10px;
-  border-bottom: 2px solid #99E2D0;
+  margin: 0;
   width: 40px;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
+}
+.menu .entrees__underline {
+  width: 40px;
+  height: 2px;
+  background-color: #99E2D0;
+  margin-bottom: 12px;
 }
 .menu .entrees__options {
+  display: flex;
   background-color: #FFF;
   border-radius: 20px;
   box-shadow: 0px 1px 3px rgba(116, 115, 115, 0.4);
-  width: 300px;
-  height: 100px;
+  width: 95%;
+  height: 90px;
+  margin-bottom: 12px;
+  padding-right: 10px;
 }
 .menu .entrees__options .entrees__name {
   font-weight: 800;
 }
 .menu .entrees__options .entrees__description {
+  width: 90%;
+  height: 60px;
+  padding: 0 0 0 10px;
+}
+.menu .entrees__options .entrees__ingredients {
   font-weight: 300;
+  display: flex;
+  justify-content: space-between;
 }
 .menu .entrees__options .entrees__cost {
   font-weight: 300;
 }
-
 .main-dish {
   padding-left: 10px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
 }
-.main-dish .main-dish__text {
+.main-dish__text {
   text-transform: uppercase;
-  margin-left: 10px;
-  border-bottom: 2px solid #99E2D0;
-  width: 40px;
+  margin: 0;
+  width: 70px;
   font-weight: 300;
+  font-size: 14px;
 }
-.main-dish .main-dish__options {
+.main-dish__underline {
+  width: 35px;
+  height: 2px;
+  background-color: #99E2D0;
+  margin-bottom: 12px;
+}
+.main-dish__options {
   background-color: #FFF;
   border-radius: 20px;
   box-shadow: 0px 1px 3px rgba(116, 115, 115, 0.4);
-  width: 300px;
-  height: 100px;
+  width: 95%;
+  height: 90px;
+  margin-bottom: 12px;
+  padding-right: 10px;
 }
-.main-dish .main-dish__options .main-dish__container {
-  height: 50px;
-  background-color: red;
-}
-.main-dish .main-dish__options .main-dish__name {
+.main-dish__options .main-dish__name {
   font-weight: 800;
+  padding-left: 10px;
 }
-.main-dish .main-dish__options .main-dish__description {
+.main-dish__options .main-dish__description {
+  width: 90%;
+  height: 60px;
+  padding: 0 0 0 10px;
+}
+.main-dish__options .main-dish__ingredients {
   font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
 }
-.main-dish .main-dish__options .main-dish__cost {
+.main-dish__options .main-dish__cost {
   font-weight: 300;
 }
 
 .desserts {
   padding-left: 10px;
+  padding-bottom: 30px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
 }
-.desserts .desserts__text {
+.desserts__text {
   text-transform: uppercase;
-  margin-left: 10px;
-  border-bottom: 2px solid #99E2D0;
-  width: 40px;
+  margin: 0;
+  width: 70px;
   font-weight: 300;
+  font-size: 14px;
 }
-.desserts .desserts__options {
+.desserts__underline {
+  width: 35px;
+  height: 2px;
+  background-color: #99E2D0;
+  margin-bottom: 12px;
+}
+.desserts__options {
   background-color: #FFF;
   border-radius: 20px;
   box-shadow: 0px 1px 3px rgba(116, 115, 115, 0.4);
-  width: 300px;
-  height: 100px;
+  width: 95%;
+  height: 90px;
+  margin-bottom: 12px;
+  padding-right: 10px;
 }
-.desserts .desserts__options .desserts__container {
-  height: 50px;
-  background-color: red;
-}
-.desserts .desserts__options .desserts__name {
+.desserts__options .desserts__name {
   font-weight: 800;
+  padding-left: 10px;
 }
-.desserts .desserts__options .desserts__description {
+.desserts__options .desserts__description {
+  width: 90%;
+  height: 60px;
+  padding: 0 0 0 10px;
+}
+.desserts__options .desserts__ingredients {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+.desserts__options .desserts__cost {
   font-weight: 300;
 }
-.desserts .desserts__options .desserts__cost {
-  font-weight: 300;
+
+.menu__order {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .menu__button {
@@ -705,7 +811,7 @@ header .header-container img {
   border-radius: 35px;
   border: none;
   cursor: pointer;
-  width: 150px;
+  width: 200px;
 }
 
 /*# sourceMappingURL=main.css.map */

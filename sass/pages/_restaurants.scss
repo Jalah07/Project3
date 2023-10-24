@@ -3,25 +3,31 @@ header {
     justify-content: center;
     align-items: center;
 
-    .header-container {
+    .header__container {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        width: 350px;
         height: 75px;
+        flex-wrap: wrap;
 
 
-        .header-container__arrow {
+        .header__arrow {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            //justify-content: center;
+            //align-items: center;
             font-size: 22px;
-            //    float: left;
-
+            min-width: fit-content;
+            flex: 1;
+            position: relative;
+            left: -70px;
         }
 
-        img {
-            width: 200px;
+        .header__logo {
+            display: flex;
+            justify-content: center;
+            //flex: 2 -0 auto;
+            //background-color: tomato;
+
         }
     }
 
@@ -52,8 +58,9 @@ header {
         background-color: #F6F6F6;
         border-radius: 25px;
         margin-top: -35px;
-        position: absolute;
+        position: relative;
         min-width: 100%;
+        padding-bottom: 30px;
     }
 
     &__options {
@@ -62,23 +69,38 @@ header {
 
     .entrees {
         padding-left: 10px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        //justify-content: space-between;
 
         &__text {
             text-transform: uppercase;
-            // padding-left: 10px;
-            margin-left: 10px;
-            border-bottom: 2px solid #99E2D0;
+            margin: 0;
             width: 40px;
             font-weight: 300;
-            font-size: 16px;
+            font-size: 14px;
+        }
+
+        &__underline {
+            width: 40px;
+            height: 2px;
+            background-color: #99E2D0;
+            margin-bottom: 12px;
         }
 
         &__options {
+            display: flex;
             background-color: #FFF;
             border-radius: 20px;
             box-shadow: 0px 1px 3px rgba(116, 115, 115, 0.4);
-            width: 300px;
-            height: 100px;
+            width: 95%;
+            height: 90px;
+            margin-bottom: 12px;
+            padding-right: 10px;
+            //display: flex;
+            //justify-content: space-between;
+            // padding: 0 10px 0 0;
 
 
             .entrees__name {
@@ -86,11 +108,23 @@ header {
             }
 
             .entrees__description {
+                width: 90%;
+                height: 60px;
+                padding: 0 0 0 10px;
+            }
+
+            .entrees__ingredients {
                 font-weight: 300;
+                display: flex;
+                justify-content: space-between;
             }
 
             .entrees__cost {
                 font-weight: 300;
+            }
+
+            .entrees__options {
+                //height: 100px;
             }
         }
     }
@@ -98,34 +132,52 @@ header {
 
 .main-dish {
     padding-left: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
 
-    .main-dish__text {
+    &__text {
         text-transform: uppercase;
-        // padding-left: 10px;
-        margin-left: 10px;
-        border-bottom: 2px solid #99E2D0;
-        width: 40px;
+        margin: 0;
+        width: 70px;
         font-weight: 300;
+        font-size: 14px;
     }
 
-    .main-dish__options {
+    &__underline {
+        width: 35px;
+        height: 2px;
+        background-color: #99E2D0;
+        margin-bottom: 12px;
+    }
+
+    &__options {
         background-color: #FFF;
         border-radius: 20px;
         box-shadow: 0px 1px 3px rgba(116, 115, 115, 0.4);
-        width: 300px;
-        height: 100px;
+        width: 95%;
+        height: 90px;
+        margin-bottom: 12px;
+        padding-right: 10px;
 
-        .main-dish__container {
-            height: 50px;
-            background-color: red;
-        }
 
         .main-dish__name {
             font-weight: 800;
+            padding-left: 10px;
         }
 
         .main-dish__description {
+            width: 90%;
+            height: 60px;
+            padding: 0 0 0 10px;
+        }
+
+        .main-dish__ingredients {
             font-weight: 300;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
         }
 
         .main-dish__cost {
@@ -135,46 +187,71 @@ header {
 }
 
 .desserts {
-    padding-left: 10px;
 
-    .desserts__text {
+    padding-left: 10px;
+    padding-bottom: 30px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+
+    &__text {
         text-transform: uppercase;
-        // padding-left: 10px;
-        margin-left: 10px;
-        border-bottom: 2px solid #99E2D0;
-        width: 40px;
+        margin: 0;
+        width: 70px;
         font-weight: 300;
+        font-size: 14px;
     }
 
-    .desserts__options {
+    &__underline {
+        width: 35px;
+        height: 2px;
+        background-color: #99E2D0;
+        margin-bottom: 12px;
+    }
+
+    &__options {
         background-color: #FFF;
         border-radius: 20px;
         box-shadow: 0px 1px 3px rgba(116, 115, 115, 0.4);
-        width: 300px;
-        height: 100px;
+        width: 95%;
+        height: 90px;
+        margin-bottom: 12px;
+        padding-right: 10px;
 
-        .desserts__container {
-            height: 50px;
-            background-color: red;
-        }
 
         .desserts__name {
             font-weight: 800;
+            padding-left: 10px;
         }
 
         .desserts__description {
+            width: 90%;
+            height: 60px;
+            padding: 0 0 0 10px;
+        }
+
+        .desserts__ingredients {
             font-weight: 300;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
         }
 
         .desserts__cost {
             font-weight: 300;
         }
     }
+
+}
+
+.menu__order {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .menu__button {
-    //position: absolute;
-    //position: fixed;
     background: linear-gradient(0deg, #9356DC, #FF79DA);
     box-shadow: 0px -1px 3px rgba(60, 60, 60, 0.4);
     color: #FFFFFF;
@@ -182,6 +259,5 @@ header {
     border-radius: 35px;
     border: none;
     cursor: pointer;
-    width: 150px;
-    
+    width: 200px;
 }

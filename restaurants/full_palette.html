@@ -20,19 +20,21 @@
   </head>
   <body>
     <header>
-      <div class="header-container">
-        <i class="fa-solid fa-arrow-left header-container__arrow"></i>
-
-        <a href="./">
-          <img src="./images/logo/ohmyfood@2x.svg" alt="" />
-        </a>
+      <div class="header__container">
+        <i class="fa-solid fa-arrow-left header__arrow"><a href="./index.html"></a></i>
+<!-- TODO -->
+        <div class="header__logo">
+          <a href="./">
+            <img src="../images/logo/ohmyfood@2x.svg" alt="" />
+          </a>
+        </div>
       </div>
     </header>
 
     <main class="menu">
       <img
         class="restaurant_img"
-        src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
         alt=""
       />
 
@@ -45,77 +47,92 @@
         <section class="menu__options"></section>
         <div class="entrees">
           <h2 class="entrees__text">Entrees</h2>
+          <div class="entrees__underline"></div>
           <!-- Three containers of entrees -->
           <div class="entrees__options">
-            <p class="entrees__name">Escargot</p>
-            <p class="entrees__description">With southern French spices</p>
-            <p class="entrees__cost">25€</p>
+            <div class="entrees__description">
+              <p class="entrees__name">Escargot</p>
+              <p class="entrees__ingredients">
+                With southern French spices <span>25€</span>
+              </p>
+            </div>
+            <!-- TODO  make same width as options,overflow: hidden-->
+            <div>
+              <div class="checkbox"><i class="fa-solid fa-circle-check"></i></div>
+            </div>
+            
           </div>
           <div class="entrees__options">
-            <p class="entrees__name">
-              Duck Foie Gras With black truffle shavings
-            </p>
-            <p class="entrees__description">With black truffle shavings</p>
-            <p class="entrees__cost">35€</p>
+            <div class="entrees__description">
+              <p class="entrees__name">
+                Duck Foie Gras
+              </p>
+              <p class="entrees__ingredients">
+                With black truffle shavings <span>35€</span>
+              </p>
+            </div>
           </div>
           <div class="entrees__options">
-            <p class="entrees__name">Fried egg</p>
-            <p class="entrees__description">
-              Seasoned with truffle cream and...
-            </p>
-            <p class="entrees__cost">20€</p>
+            <div class="entrees__description">
+              <p class="entrees__name">Fried egg</p>
+              <p class="entrees__ingredients">
+                Seasoned with truffle cream and... <span>20€</span>
+              </p>
+            </div>
           </div>
         </div>
         <div class="main-dish">
           <h2 class="main-dish__text">Main dish</h2>
+          <div class="main-dish__underline"></div>
           <!-- Three containers of main dishes -->
           <div class="main-dish__options">
             <p class="main-dish__name">Herb-Encrusted Steak</p>
-            <p class="main-dish__description">
+            <p class="main-dish__ingredients">
               With delicately sliced and seasoned veg...
+              <span>40€</span>
             </p>
-            <p class="main-dish__cost">40€</p>
           </div>
           <div class="main-dish__options">
             <p class="main-dish__name">
               Ox Tail Shepard's Pie
             </p>
-            <p class="main-dish__description">
+            <p class="main-dish__ingredients">
               With black truffle and pureed parsnips
+              <span>35€</span>
             </p>
-            <p class="main-dish__cost">35€</p>
           </div>
           <div class="main-dish__options">
             <p class="main-dish__name">Filet of Sole</p>
-            <p class="main-dish__description">With citrus dressing</p>
-            <p class="main-dish__cost">44€</p>
+            <p class="main-dish__ingredients">
+              With citrus dressing <span>44€</span>
+            </p>
           </div>
         </div>
         <div class="desserts">
           <h2 class="desserts__text">Desserts</h2>
+          <div class="desserts__underline"></div>
           <!-- Three containers of desserts -->
           <div class="desserts__options">
             <p class="desserts__name">Paris-Brest</p>
-            <p class="desserts__description">
-              Revisted
-            </p>
-            <p class="desserts__cost">18€</p>
+            <p class="desserts__ingredients">Revisted <span>18€</span></p>
           </div>
           <div class="desserts__options">
             <p class="desserts__name">
               Chocolate Macaroons
             </p>
-            <p class="desserts__description">
+            <p class="desserts__ingredients">
               With vanilla ice cream
+              <span>22€</span>
             </p>
-            <p class="desserts__cost">22€</p>
           </div>
           <div class="desserts__options">
             <p class="desserts__name">Chocolate Mousse</p>
-            <p class="desserts__description">With spices and black truffle</p>
-            <p class="desserts__cost">23€</p>
+            <p class="desserts__ingredients">
+              With spices and black truffle <span>23€</span>
+            </p>
           </div>
         </div>
+        <!-- TODO change to div  -->
         <section class="menu__order">
           <button class="menu__button">Order</button>
         </section>
