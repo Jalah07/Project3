@@ -701,9 +701,9 @@ header .header__container .header__logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
   padding-bottom: 40px;
   padding-left: 30px;
+  padding-right: 30px;
 }
 .menu__title h1 {
   margin: 0;
