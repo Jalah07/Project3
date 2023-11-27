@@ -20,12 +20,12 @@
     <link rel="shortcut icon" href="images/logo/ohmyfood@2x.svg" />
   </head>
   <body>
-    <!-- <div class="spinner">
+    <div class="spinner">
       <div class="spinner__loader"></div>
-    </div> -->
+    </div>
     <header>
       <a href="./">
-        <img src="/images/logo/ohmyfood@2x.svg" alt="" />
+        <img src="./images/logo/ohmyfood@2x.svg" alt="" />
       </a>
     </header>
     <div class="location">
@@ -34,38 +34,42 @@
     </div>
 
     <main>
-      <section class="booking">
-        <h1>Book the menu you like</h1>
-        <p>Discover top-of-the-art restaurants we <br />picked for you</p>
-        <button class="explore-button">Explore our restaurants</button>
-      </section>
+      <div class="first-section">
+        <section class="booking">
+          <h1>Book the menu you like</h1>
+          <p>Discover top-of-the-art restaurants we <br />picked for you</p>
+          <button class="explore-button">Explore our restaurants</button>
+        </section>
 
-      <section class="how-to">
-        <h2>How it works</h2>
-        <div class="navigation__button">
-          <div class="how-it-works-step">
-            <div class="how-it-works-step__number">1</div>
-            <div class="how-it-works-step__contents">
-              <i class="fas fa-mobile-alt how-it-works-step__icon"></i>
-              <p>Choose a restaurant</p>
+        <section class="how-to">
+          <h2>How it works</h2>
+          <div class="navigation__button">
+            <div class="how-it-works-step">
+              <div class="how-it-works-step__number">1</div>
+              <div class="how-it-works-step__contents">
+                <i class="fas fa-mobile-alt how-it-works-step__icon"></i>
+                <p>Choose a restaurant</p>
+              </div>
+            </div>
+            <div class="how-it-works-step">
+              <div class="how-it-works-step__number">2</div>
+              <div class="how-it-works-step__contents">
+                <i class="fas fa-list how-it-works-step__icon"></i>
+                <p>Create your menu</p>
+              </div>
+            </div>
+            <div class="how-it-works-step">
+              <div class="how-it-works-step__number">3</div>
+              <div
+                class="how-it-works-step__contents how-it-works-step__step_3"
+              >
+                <i class="fas fa-store how-it-works-step__icon"></i>
+                <p>Go enjoy it at the restaurant</p>
+              </div>
             </div>
           </div>
-          <div class="how-it-works-step">
-            <div class="how-it-works-step__number">2</div>
-            <div class="how-it-works-step__contents">
-              <i class="fas fa-list how-it-works-step__icon"></i>
-              <p>Create your menu</p>
-            </div>
-          </div>
-          <div class="how-it-works-step">
-            <div class="how-it-works-step__number">3</div>
-            <div class="how-it-works-step__contents how-it-works-step__step_3">
-              <i class="fas fa-store how-it-works-step__icon"></i>
-              <p>Go enjoy it at the restaurant</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section class="restaurants">
         <h2>Restaurants</h2>
@@ -140,14 +144,16 @@
 
     <footer>
       <a href="#home"><h2 class="footer__title">ohmyfood</h2></a>
-      <a href="#"
-        ><i class="fas fa-utensils footer__icon"></i>Suggest a restaurant</a
-      >
-      <a href="#"
-        ><i class="fas fa-hands-helping footer__icon"></i>Become a partner</a
-      >
-      <a href="#">Legal</a>
-      <a href="mailto:info@ohmyfood.com">Contact</a>
+      <div class="footer__items">
+        <a href="#"
+          ><i class="fas fa-utensils footer__icon"></i>Suggest a restaurant</a
+        >
+        <a href="#"
+          ><i class="fas fa-hands-helping footer__icon"></i>Become a partner</a
+        >
+        <a href="#">Legal</a>
+        <a href="mailto:info@ohmyfood.com">Contact</a>
+      </div>
     </footer>
   </body>
 </html>
