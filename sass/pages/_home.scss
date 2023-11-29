@@ -60,7 +60,6 @@ header a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    //font-family: 'Roboto', sans-serif;
     background-color: #F6F6F6;
     text-align: center;
     padding: 25px 0 50px 0;
@@ -106,8 +105,6 @@ header a {
     justify-content: flex-start;
     height: 85px;
     gap: 0;
-    //background-color: blue;
-    //justify-items: center;
 }
 
 .how-it-works-step__number {
@@ -121,7 +118,6 @@ header a {
     align-items: center;
     font-size: 14px;
     transform: translate(10px, 0px);
-
 }
 
 .how-it-works-step__contents {
@@ -134,7 +130,6 @@ header a {
     gap: 20px;
     padding: 0 0 0 20px;
     box-shadow: 0px 1px 3px rgba(116, 115, 115, 0.4);
-
 }
 
 .how-it-works-step__step_3 {
@@ -152,8 +147,6 @@ header a {
 .restaurants {
     background-color: #F6F6F6;
     padding: 30px 0 0 0;
-    //position: relative;
-    //text-decoration: none !important;
 }
 
 .cards img {
@@ -169,9 +162,6 @@ header a {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    //position: relative;
-    //position: absolute;
-    //height: 1200px;
 }
 
 
@@ -196,10 +186,8 @@ header a {
     width: 70px;
     height: 27px;
     border-radius: 3px;
-    //align-content: center;
     justify-content: center;
     align-items: center;
-    //transform: translate(220px, -170px);
     position: absolute;
     right: 15px;
     margin-top: 10px;
@@ -212,7 +200,6 @@ header a {
     font-size: 15px;
     height: 50px;
     justify-content: space-around;
-    //background-color: firebrick;
     padding: 10px 0 0 15px;
     gap: 0;
     position: relative;
@@ -220,7 +207,6 @@ header a {
     p {
         margin: 10px 0;
     }
-
 }
 
 .card__caption h3 {
@@ -307,14 +293,6 @@ footer a {
         width: 85%;
     }
 
-    // .how-it-works-step {
-    //     height: 100px;
-    // }
-
-    // .how-it-works-step__contents {
-    //     height: 85px;
-    // }
-
     .restaurants h2 {
         display: flex;
         justify-content: center;
@@ -338,7 +316,6 @@ footer a {
             width: 300px;
         }
     }
-
 }
 
 @media (min-width: 901px) {
@@ -368,10 +345,8 @@ footer a {
 
     .how-to {
         width: 100vh;
-        //background-color: #F6F6F6;
         display: flex;
         flex-direction: column;
-        //justify-content: center;
         height: 300px;
         align-items: center;
 
@@ -380,7 +355,6 @@ footer a {
     .how-it-works-step {
         width: 350px;
     }
-
 
     .restaurants h2 {
         display: flex;
@@ -411,5 +385,4 @@ footer a {
             width: 300px;
         }
     }
-
 }

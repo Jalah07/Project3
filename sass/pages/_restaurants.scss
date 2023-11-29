@@ -121,7 +121,7 @@ header {
             background-color: #FFF;
             border-radius: 20px;
             box-shadow: 0px 1px 3px rgba(116, 115, 115, 0.4);
-            width: 325px; // increase width
+            width: 325px;
             height: 80px;
             margin-bottom: 12px;
             overflow: hidden;
@@ -226,7 +226,7 @@ header {
 @keyframes moveup {
     to {
         transform: translateY(-8px);
-        //  transform: translateY(0);
+
     }
 
     0% {
@@ -241,7 +241,6 @@ header {
 @keyframes fadein {
     to {
         transform: translateY(-8px);
-        //  transform: translateY(0);
     }
 
     0% {
@@ -252,123 +251,6 @@ header {
         opacity: 1;
     }
 }
-
-// .main-dish {
-//     padding-left: 10px;
-//     height: 350px;
-//     display: flex;
-//     flex-direction: column;
-//     //justify-content: space-between;
-
-//     &__text {
-//         text-transform: uppercase;
-//         margin: 0;
-//         width: 70px;
-//         font-weight: 300;
-//         font-size: 14px;
-//         padding-bottom: 5px;
-//     }
-
-//     &__underline {
-//         width: 35px;
-//         height: 2px;
-//         background-color: #99E2D0;
-//         margin-bottom: 12px;
-//     }
-
-//     &__options {
-//         background-color: #FFF;
-//         border-radius: 20px;
-//         box-shadow: 0px 1px 3px rgba(116, 115, 115, 0.4);
-//         width: 95%;
-//         height: 90px;
-//         margin-bottom: 12px;
-//         padding-right: 10px;
-
-
-//         .main-dish__name {
-//             font-weight: 800;
-//             padding-left: 10px;
-//         }
-
-//         .main-dish__description {
-//             width: 90%;
-//             height: 60px;
-//             padding: 0 0 0 10px;
-//         }
-
-//         .main-dish__ingredients {
-//             font-weight: 300;
-//             display: flex;
-//             justify-content: space-between;
-//             padding-left: 10px;
-//         }
-
-//         .main-dish__cost {
-//             font-weight: 300;
-//         }
-//     }
-// }
-
-// .desserts {
-
-//     padding-left: 10px;
-//     padding-bottom: 30px;
-//     height: 350px;
-//     display: flex;
-//     flex-direction: column;
-//     //justify-content: space-between;
-
-//     &__text {
-//         text-transform: uppercase;
-//         margin: 0;
-//         width: 70px;
-//         font-weight: 300;
-//         font-size: 14px;
-//         padding-bottom: 5px;
-//     }
-
-//     &__underline {
-//         width: 35px;
-//         height: 2px;
-//         background-color: #99E2D0;
-//         margin-bottom: 12px;
-//     }
-
-//     &__options {
-//         background-color: #FFF;
-//         border-radius: 20px;
-//         box-shadow: 0px 1px 3px rgba(116, 115, 115, 0.4);
-//         width: 95%;
-//         height: 90px;
-//         margin-bottom: 12px;
-//         padding-right: 10px;
-
-
-//         .desserts__name {
-//             font-weight: 800;
-//             padding-left: 10px;
-//         }
-
-//         .desserts__description {
-//             width: 90%;
-//             height: 60px;
-//             padding: 0 0 0 10px;
-//         }
-
-//         .desserts__ingredients {
-//             font-weight: 300;
-//             display: flex;
-//             justify-content: space-between;
-//             padding-left: 10px;
-//         }
-
-//         .desserts__cost {
-//             font-weight: 300;
-//         }
-//     }
-
-// }
 
 .menu__order {
     display: flex;
@@ -423,25 +305,7 @@ header {
 
 
         }
-
-        &dish__options {}
     }
-
-    // .dish {
-    //     &__first {
-    //         // width: 500px;
-    //         // color: #9356DC;
-    //     }
-
-    //     &__wrapper {
-    //         min-width: 100%;
-    //         justify-content: space-between;
-    //     }
-
-    //     &__options {
-    //         min-width: 90%;
-    //     }
-    // }
 
 }
 
